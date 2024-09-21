@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 class Estado
 {
     public $text;
@@ -9,6 +10,7 @@ class Estado
     public $id;
     public $class;
 
+    // Constructor para inicializar el objeto _estado
     public function __construct($data = [])
     {
         $this->text = $data['text'] ?? null;
