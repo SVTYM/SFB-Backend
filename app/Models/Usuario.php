@@ -14,11 +14,12 @@ class Usuario extends Authenticatable
 
     // Campos permitidos para asignación masiva
     protected $fillable = [
+        'id_empleado', // Asegúrate de incluir este campo
         'rfc',
         'password',
     ];
 
-    // Ocultar campos sensibles en las respuestas JSON
+    // Ocultar campos sensibles
     protected $hidden = [
         'password',
     ];

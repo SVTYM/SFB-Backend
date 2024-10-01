@@ -2,10 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContratoController;
-use App\Http\Controllers\TareaController;
 use App\Http\Controllers\UsuarioController;
-use App\Http\Controllers\ContratoUsuarioController;
+use App\Http\Controllers\EmpleadoController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,3 +18,7 @@ use App\Http\Controllers\ContratoUsuarioController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('/cambiar-password', [UsuarioController::class, 'cambiarPassword']);
+
+Route::get('/sync-empleados', [EmpleadoController::class, 'syncEmpleados']);
+Route::post('/login-empleado', [EmpleadoController::class, 'login']);
