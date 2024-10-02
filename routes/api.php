@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\ImageController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -22,3 +23,4 @@ Route::post('/cambiar-password', [UsuarioController::class, 'cambiarPassword']);
 
 Route::get('/sync-empleados', [EmpleadoController::class, 'syncEmpleados']);
 Route::post('/login-empleado', [EmpleadoController::class, 'login']);
+Route::post('/upload-image', [ImageController::class, 'store'])->name('upload.image');
